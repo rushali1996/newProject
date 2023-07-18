@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="SampleSuite">
+	  
   <test thread-count="5" name="ModuleTest">
+ <groups>
+		<define name= "smokeTest">
+			<include name="featureOne"/>
+			<include name="featureTwo"/>
+		</define>
+			
+		<define name= "regressionTest">
+		    <include name="featureThree"/>
+		    <include name="featureOne"/>
+			<include name="featureFour"/>
+		</define>
+	<run>
+	   <exclude name="smokeTest"/>
+	   <include name="regressionTest"/>
+	</run>
+	</groups>
     <classes>
-      <class name="testScripts.GooglePageTest"/>
-      <class name="testScripts.testClass2"/>
+      <class name="testScripts.testClass3"/>
+      <class name="testScripts.testClass4"/>
     </classes>
   </test> <!-- ModuleTest -->
 </suite> <!-- SampleSuite -->

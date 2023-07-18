@@ -19,7 +19,6 @@ public class GooglePageTest {
 
 	@BeforeMethod
 	 public void setup() {
-		
 	  driver = new ChromeDriver();
 	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
@@ -34,6 +33,7 @@ public class GooglePageTest {
 		schBox.submit();
 		Assert.assertEquals(driver.getTitle(),"java tutorial - Google Search");
   }
+  
   @Test
   public void seleniumSearchTest() {
 		 
@@ -43,6 +43,18 @@ public class GooglePageTest {
 		schBox.sendKeys("selenium tutorial");
 		schBox.submit();
 		Assert.assertEquals(driver.getTitle(),"selenium tutorial - Google Search");
+		  
+  }
+  
+  @Test (alwaysRun= true, dependsOnMethods="seleniumSearchTest")
+  public void appiumSearchTest() {
+		 
+		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
+        WebElement schBox =driver.findElement(By.name("qa"));
+		schBox.sendKeys("appium tutorial");
+		schBox.submit();
+		Assert.assertEquals(driver.getTitle(),"appium tutorial - Google Search");
 		  
   }
   

@@ -11,11 +11,11 @@ import org.testng.annotations.Test;
 
 public class testClass2 {
   @Test
-  
   public void cypressSearchTest() {
 		 WebDriver driver = new ChromeDriver();
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		 driver.get("https://www.google.com/");
+		 Assert.assertEquals(driver.getTitle(),"Google");
 		 driver.manage().window().maximize();
 		 WebElement schBox =driver.findElement(By.name("qa"));
 		 schBox.sendKeys("cypress tutorial");
