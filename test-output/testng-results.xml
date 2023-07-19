@@ -2,27 +2,34 @@
 <testng-results ignored="0" total="3" passed="0" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-19T11:31:16 IST" name="Default suite" finished-at="2023-07-19T11:31:17 IST" duration-ms="99">
+  <suite started-at="2023-07-19T13:23:51 IST" name="Default suite" finished-at="2023-07-19T13:23:51 IST" duration-ms="169">
     <groups>
     </groups>
-    <test started-at="2023-07-19T11:31:16 IST" name="Default test" finished-at="2023-07-19T11:31:17 IST" duration-ms="99">
-      <class name="testScripts.GooglePageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="setup" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689746476910" status="FAIL">
-          <exception class="org.testng.TestNGException">
+    <test started-at="2023-07-19T13:23:51 IST" name="Default test" finished-at="2023-07-19T13:23:51 IST" duration-ms="169">
+      <class name="testScripts.loginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testScripts.loginPageTest@201a4587]" started-at="2023-07-19T13:23:51 IST" name="setup" finished-at="2023-07-19T13:23:51 IST" duration-ms="70" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml]]>
+              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:660)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:300)
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:127)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:48)
+at testScripts.loginPageTest.setup(loginPageTest.java:41)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:136)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
 at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:645)
 at org.testng.TestRunner.beforeRun(TestRunner.java:634)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -41,34 +48,45 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setupExtent()[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="setupExtent" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupExtent -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="setup" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="seleniumSearchTest()[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="seleniumSearchTest" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
+        <test-method signature="validLogin(java.lang.String,java.lang.String)[pri:0, instance:testScripts.loginPageTest@201a4587]" started-at="2023-07-19T13:23:51 IST" name="validLogin" data-provider="loginData" finished-at="2023-07-19T13:23:51 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml]]>
+              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:660)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:300)
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:127)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:48)
+at testScripts.loginPageTest.setup(loginPageTest.java:41)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:136)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
 at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:645)
 at org.testng.TestRunner.beforeRun(TestRunner.java:634)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -87,34 +105,45 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- seleniumSearchTest -->
-        <test-method is-config="true" signature="generateReport(org.testng.ITestResult)[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="generateReport" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateReport -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="setup" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="javaSearchTest()[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="javaSearchTest" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
+        </test-method> <!-- validLogin -->
+        <test-method signature="validLogin(java.lang.String,java.lang.String)[pri:0, instance:testScripts.loginPageTest@201a4587]" started-at="2023-07-19T13:23:51 IST" name="validLogin" data-provider="loginData" finished-at="2023-07-19T13:23:51 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[welcomw123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[welcomw123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml]]>
+              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:660)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:300)
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:127)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:48)
+at testScripts.loginPageTest.setup(loginPageTest.java:41)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:136)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
 at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:645)
 at org.testng.TestRunner.beforeRun(TestRunner.java:634)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -133,34 +162,45 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- javaSearchTest -->
-        <test-method is-config="true" signature="generateReport(org.testng.ITestResult)[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="generateReport" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateReport -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="setup" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="appiumSearchTest()[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="appiumSearchTest" finished-at="2023-07-19T11:31:16 IST" depends-on-methods="testScripts.GooglePageTest.seleniumSearchTest" duration-ms="1" status="SKIP">
-          <exception class="org.testng.TestNGException">
+        </test-method> <!-- validLogin -->
+        <test-method signature="validLogin(java.lang.String,java.lang.String)[pri:0, instance:testScripts.loginPageTest@201a4587]" started-at="2023-07-19T13:23:51 IST" name="validLogin" data-provider="loginData" finished-at="2023-07-19T13:23:51 IST" duration-ms="1" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[welcome233]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[welcome233]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml]]>
+              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\A0785476\AppData\Local\Temp\testng-eclipse--491654388\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:660)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:300)
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from https://chromedriver.storage.googleapis.com/index.html
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:127)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:48)
+at testScripts.loginPageTest.setup(loginPageTest.java:41)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:136)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
 at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:645)
 at org.testng.TestRunner.beforeRun(TestRunner.java:634)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -179,19 +219,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- appiumSearchTest -->
-        <test-method is-config="true" signature="generateReport(org.testng.ITestResult)[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:16 IST" name="generateReport" finished-at="2023-07-19T11:31:16 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateReport -->
-        <test-method is-config="true" signature="finishExtent()[pri:0, instance:testScripts.GooglePageTest@7c711375]" started-at="2023-07-19T11:31:17 IST" name="finishExtent" finished-at="2023-07-19T11:31:17 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishExtent -->
-      </class> <!-- testScripts.GooglePageTest -->
+        </test-method> <!-- validLogin -->
+      </class> <!-- testScripts.loginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

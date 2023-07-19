@@ -3,17 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.GooglePageTest">
+      <class name="testScripts.loginPageTest">
         <methods>
-          <include name="generateReport"/>
-          <include name="appiumSearchTest"/>
-          <include name="seleniumSearchTest"/>
-          <include name="javaSearchTest"/>
-          <include name="setupExtent"/>
-          <include name="finishExtent"/>
+          <include name="validLogin"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testScripts.GooglePageTest -->
+      </class> <!-- testScripts.loginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

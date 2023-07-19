@@ -6,6 +6,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import commonUtils.Utility;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -28,29 +30,31 @@ public class GooglePageTest {
 	ExtentSparkReporter spark;
 	ExtentTest extentTest;
 	
+	
+
+	
+	//@BeforeMethod
+	//@BeforeTest
+	//@Parameters("browser")
+//	 public void setup(String strBrowser) {
+//		if(strBrowser.equalsIgnoreCase("chrome")) {
+//	        driver = new ChromeDriver();
+//		}
+//		else if(strBrowser.equalsIgnoreCase("edge")) {
+//			driver = new EdgeDriver();
+//		}
+//	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//	}
 	@BeforeTest
 	public void setupExtent() {
 		extentReports =new ExtentReports();
 		spark = new ExtentSparkReporter("test-output/SparkReport.html");
 		extentReports.attachReporter(spark);
 	}
-
-	@Parameters("browser")
-	@BeforeMethod
-	@BeforeTest
-	 public void setup(String strBrowser) {
-		if(strBrowser.equalsIgnoreCase("chrome")) {
-	        driver = new ChromeDriver();
-		}
-		else if(strBrowser.equalsIgnoreCase("edge")) {
-			driver = new EdgeDriver();
-		}
-	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-	}
 	
   @Test
   public void javaSearchTest() {
-		
+	  driver = new ChromeDriver();
 	    extentTest= extentReports.createTest("java search test");	
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
@@ -62,7 +66,7 @@ public class GooglePageTest {
   
   @Test
   public void seleniumSearchTest() {
-	  
+	  driver = new ChromeDriver();
 	    extentTest= extentReports.createTest("selenium search test");
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
@@ -75,7 +79,7 @@ public class GooglePageTest {
   
   @Test (alwaysRun= true, dependsOnMethods="seleniumSearchTest")
   public void appiumSearchTest() {
-	  
+	  driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
         WebElement schBox =driver.findElement(By.name("qa"));
@@ -94,6 +98,10 @@ public class GooglePageTest {
   public void generateReport(ITestResult result) {
 	  if(result.getStatus()== ITestResult.FAILURE) {
 		  extentTest.fail(result.getThrowable().getMessage());
+		  // add screenshot
+		  String path = Utility.getScreenshotPath(driver);
+		  extentTest.addScreenCaptureFromPath(path);
+		
          }
 	  
   driver.close();
