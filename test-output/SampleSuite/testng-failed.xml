@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ModuleTest(failed)">
+<suite thread-count="4" parallel="tests" name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="Edge"/>
+  <test thread-count="4" parallel="tests" name="ModuleTestOne(failed)">
     <classes>
       <class name="testScripts.GooglePageTest">
         <methods>
+          <include name="appiumSearchTest"/>
           <include name="seleniumSearchTest"/>
           <include name="javaSearchTest"/>
           <include name="tearDown"/>
+          <include name="setupExtent"/>
+          <include name="finishExtent"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testScripts.GooglePageTest -->
-      <class name="testScripts.testClass2">
-        <methods>
-          <include name="cypressSearchTest"/>
-        </methods>
-      </class> <!-- testScripts.testClass2 -->
     </classes>
-  </test> <!-- ModuleTest(failed) -->
+  </test> <!-- ModuleTestOne(failed) -->
 </suite> <!-- Failed suite [SampleSuite] -->

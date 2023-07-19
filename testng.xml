@@ -2,23 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="SampleSuite" thread-count ="4" parallel="tests">
-  
-  <test name="ModuleTestOne">
- 
+ <test name="ModuleTestOne">
+  <parameter name= "browser" value="chrome"/>
     <classes>
     
-      <class name="parallelExecution.testClass3"/>
-      <class name="parallelExecution.testClass4"/>
+      <class name="testScripts.GooglePageTest"/>
+      
      
     </classes>
-    </test>
-     <test name="ModuleTestTwo">
- 
-    <classes>
-    
- 
-      <class name="parallelExecution.testClass5"/>
-     
-    </classes>
+   
   </test> <!-- ModuleTest -->
 </suite> <!-- SampleSuite -->
